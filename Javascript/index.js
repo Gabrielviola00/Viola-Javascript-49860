@@ -97,7 +97,7 @@ function crearFormularioIniciarSesion(){
                 const contraseñaIngresada = inputContraseñaIniciar.value;
             if (nombreApellidoIngresado === usuarioGuardado.nombreApellido && contraseñaIngresada === usuarioGuardado.contraseña) {
                 alert('Inicio de sesión exitoso');
-                window.location.href = "../páginas/usuario.html"
+                window.location.href = "./páginas/usuario.html"
             } else {
                 alert('Nombre de usuario o contraseña incorrectos');
                 
