@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/usuario.css">
+
+</head>
+<body class="contenedor">
+  
+    <header class="contenedor-titulo" id="contenedor-datos">
+            <div class="completar-datos">
+                <h1 class="titulo-inversiones">DATOS PERSONALES</h1>
+                <input type="number" placeholder="INGRESAR DNI" id="input-ingresar-dni">
+                <input type="text" id="input-ingresar-correo" placeholder="INGRESAR CORREO">
+                <button id="actualizar-datos">ACTUALIZAR DATOS</button>
+                <h2 id="nombre-apellido"></h2>
+                <h2 id="contenedor-contraseña"></h2>
+                <h2 id="contenedor-dni"></h2>
+                <h2 id="contenedor-correo"></h2>
+                
+            </div>
+            <div class="deposito-saldo">
+                <br>
+                <input type="number" placeholder="INGRESAR MONTO" id="contenedor-deposito"><button id="boton-depositar">DEPOSITAR</button><br><br><br><br>
+                <input type="number" placeholder="INGRESAR MONTO" id="contenedor-extraccion"><button id="boton-retirar">RETIRAR</button><br><br><br><br>
+                <h2 class="h2">Su saldo es de</h2><h2 class="h2" id="saldo"></h2>
+            </div>
+            <div class="inversiones">
+                <h1 class="caja-inversiones titulo-inversiones">INVERSIONES</h1><br><br><button class="boton-inversiones">CARGAR INVERSIONES DISPONIBLES</button><br><br>
+                <h3 class="caja-inversiones" id="plazo-fijo"></h3><br><br><input placeholder="INGRESE MONTO" id="input-plazo-fijo" type="number"><button id="boton-calcular-plafo-fijo">CALCULAR RENDIMIENTO MENSUAL</button><h3 id="contenedor-rendimiento-plazo-fijo"></h3><br>
+                <h3 class="caja-inversiones" id="uva"></h3><br><br><input placeholder="INGRESE MONTO" id="input-uva" type="number"><button id="boton-calcular-uva">CALCULAR RENDIMIENTO MENSUAL</button><h3 id="contenedor-rendimiento-uva"></h3><br>
+                <h3 class="caja-inversiones" id="dinero-en-movimiento"></h3><br><br><input placeholder="INGRESE MONTO" id="input-movimiento" type="number"><button id="boton-calcular-dinero">CALCULAR RENDIMIENTO MENSUAL</button><h3 id="contenedor-rendimiento-dinero"></h3>
+            </div>
+            <div class="apis">
+                <h1></h1>               
+            </div>
+
+
+    </header>
+
+
+<script src="/Javascript/usuario.js"></script>
+</body>
+</html>

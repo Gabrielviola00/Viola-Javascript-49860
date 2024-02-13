@@ -1,0 +1,75 @@
+
+.contenedor{
+    background-color: black;
+    overflow: hidden;
+}
+
+.contenedor-titulo{
+    background-color: #6D2932;
+    width: 115rem;
+    height: 55rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "completar-datos deposito-saldo"
+    "inversiones apis";
+}
+
+/*CAJA DATOS PERSONALES*/
+.completar-datos{
+    grid-area: completar-datos;
+    
+}
+.deposito-saldo{
+    grid-area: deposito-saldo;
+
+
+    
+}
+.inversiones{
+    grid-area: inversiones;
+
+
+    
+}
+.apis{
+    grid-area: apis;
+
+
+      
+}
+/*CAJA DATOS PERSONALES*/
+
+/*CAJA DEPOSITO EXTRACCION*/
+
+
+.h2{
+    display: inline;
+    font-size: 3rem;
+}
+
+/*CAJA DEPOSITO EXTRACCION*/
+
+/*CAJA INVERSIONES*/
+.caja-inversiones{
+    display: inline;
+    
+    color: white;
+}
+
+.titulo-inversiones{
+    margin-left: 15px;
+    color: black;
+}
+.boton-inversiones{
+    
+    background-color: black;
+    height: 30px;
+    color: white;
+}
+
+/*CAJA INVERSIONES*/
+

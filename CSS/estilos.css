@@ -1,0 +1,186 @@
+.contenedor{
+    background-color: black;
+    overflow: hidden;
+}
+
+/*CAJA ARRIBA IZQUIERDA*/
+.contenedor-titulo{
+    background-color: #6D2932;
+    width: 115rem;
+    height: 55rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "nombre-bancario login"
+    "presentacion  imagen";
+}
+
+.nombre-bancario{
+    grid-area: nombre-bancario;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    margin-left: 8rem;
+     
+}
+
+.primer-imagen {
+    object-fit: contain;
+    align-self: start;
+    padding-right: 0px;
+    margin-top: 5rem;
+    
+
+    
+}
+
+.titulo{
+    align-self: center;
+    margin-left: -5.5rem;;
+    color: black;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 1.9rem;
+}
+
+
+
+
+
+
+/*CAJA ARRIBA DERECHA*/
+
+.login{
+    grid-area: login;
+    width: 20rem;
+    height: 20rem; 
+    display: grid;
+    margin-left: 15rem;
+    grid-template-areas:
+    "boton-registrarse boton-iniciar-sesion"
+    "input-registrarse input-iniciar-sesion" ;
+    
+}
+
+
+.boton-registrarse{
+    width: 9rem;
+    height: 4rem;
+    background-color: black;
+    color: white;
+    grid-area: boton-registrarse;
+    
+
+}
+
+.boton-iniciar-sesion{
+width: 9rem;
+height: 4rem;
+margin-left: 4rem;
+background-color: black;
+color: white;
+grid-area: boton-iniciar-sesion;
+}
+
+
+.input-registrarse{
+    background-color: #6D2932;
+    width: 14rem;
+    height: 4rem;
+    
+    
+    grid-area: input-registrarse;
+}
+
+.input-nombre-apellido{
+    margin-bottom: 1rem;
+    width: 180px;
+    background-color: black;
+    color: white;
+}
+
+.input-contraseña{
+    width: 180px;
+    background-color: black;
+    color: white;
+}
+
+.boton-registrarse-iniciar{
+    background-color: black;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+
+.input-iniciarSesion{
+    background-color: #6D2932;
+    width: 15rem;
+    height: 10rem;
+    grid-area: iniciar-sesion;
+}
+
+.contenedor-formulario-iniciar-sesion{
+    margin-left: 2rem;
+}
+
+.input-iniciarSesion-nombre-apellido{
+    margin-bottom: 1rem;
+    width: 0px;
+    background-color: black;
+    color: white;
+}
+
+.input-iniciarSesion-contraseña{
+    width: 0px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+/*CAJA ABAJO IZQUIERDA*/
+.presentacion{
+    grid-area: presentacion;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: black;
+    margin-left: 10rem;
+}
+
+
+
+.parrafo{
+    width: 100%;
+    margin-top: -5rem;
+    text-align: center;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 1.4rem;
+}
+
+
+
+/*CAJA ABAJO IZQUIERDA*/
+.imagen{
+    grid-area: imagen;
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin-left: 3rem;
+}
+
+
+.segunda-imagen{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    margin-left: 12rem;
+    margin-top: -20rem;
+}
+
+
+
