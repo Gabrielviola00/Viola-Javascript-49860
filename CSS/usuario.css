@@ -15,7 +15,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "completar-datos deposito-saldo"
-    "inversiones apis";
+    "apis inversiones";
 }
 
 /*CAJA DATOS PERSONALES*/
@@ -31,6 +31,8 @@
 }
 .inversiones{
     grid-area: inversiones;
+    margin-top: -10rem;
+    margin-right: 2rem;
 
 
     
@@ -41,7 +43,10 @@
     grid-area: apis;
     width: 10rem;
     height: 10rem;
+    margin-top: -9rem;
     display: flex;
+    flex-direction:column ;
+    
 
 
       
@@ -59,14 +64,17 @@
 /*CAJA DEPOSITO EXTRACCION*/
 
 /*CAJA INVERSIONES*/
+
+
 .caja-inversiones{
     display: inline;
-    
+    font-size: 15px;
     color: white;
 }
 
 .titulo-inversiones{
     margin-left: 15px;
+    font-size: 55px;
     color: black;
 }
 .boton-inversiones{
@@ -86,11 +94,19 @@
 
   /*CAJA CONSUMO DE API*/
 .promocion{
-    margin-left: -10rem;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     height: 7rem;
     width: 18rem;
     background-color: white;
     text-align: center;
+    
+}
+
+.contenedor-promocion{
+    display: flex;
+    flex-direction: row;
 }
 
   .imagen-api{

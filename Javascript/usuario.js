@@ -186,7 +186,7 @@ calcularRendimientos()
 
 //USO DE PROMESAS, FETCH Y JSON
 
-let contenedorOfertaDeposito = document.querySelector(".apis");
+let contenedorOfertaDeposito = document.querySelector(".contenedor-promocion");
 
 
 
@@ -209,7 +209,7 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
     })
     
     .catch(error => {
-        console.error('Error fetching data:', error);
+        console.error('Error al cargar promociones', error);
     });
 
 //USO DE PROMESAS, FETCH Y JSON
