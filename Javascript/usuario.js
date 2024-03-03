@@ -18,25 +18,35 @@ BotonActualizarDatos.addEventListener('click', function () {
     contenedorContraseña.textContent = `CONTRASEÑA: ${contraseña}`
 
     contenedorDni.textContent =`DNI: ${inputDni.value}`
-    if( inputDni.value.length === 8) {
-        alert("Su numero de DNI a sido registrado exitosamente") 
-    }
-    else {
-        alert('DNI inválido, el mismo debe contener al menos 8 caracteres')
-        contenedorDni.textContent = 'DNI INVÁLIDO'
-    }
+
+     
 
     let letrasBuscadas = ["@", ".com"];
 
     if (letrasBuscadas.every(letra => inputCorreo.value.includes(letra)) && inputCorreo.value.length > 8) {
-        alert('Su correo a sido registrado exitosamente')
+        Swal.fire({
+            icon: "éxito",
+            title: "SU CORREO ELECTRÓNICO A SIDO REGISTRADO ÉXITOSAMENTE",
+            customClass: {
+                popup: 'mi-clase-popup'
+            
+            
+        }})
         contenedorCorreo.textContent = `CORREO: ${inputCorreo.value}`;
     } else {
-        alert(`El correo ingresado es inválido. Debe contener al menos un "@" y ".com", y tener más de 8 caracteres.`);
+
+        Swal.fire({
+            icon: "error",
+            title: 'El correo ingresado es inválido. Debe contener al menos un "@" y ".com", y tener más de 8 caracteres.',
+            customClass: {
+                popup: 'mi-clase-popup'
+            
+            
+        }})
         contenedorCorreo.textContent = 'EMAIL SIN REGISTRAR';
     }
     
-});
+}); 
 
 
 /*FUNCION COMPLETAR DATOS*/ 
@@ -57,25 +67,48 @@ let saldo = 0;
 
 function depositoExtraccion() {
     botonDeposito.addEventListener('click', function() {
-        let deposito = Number(contenedorDeposito.value);
+        let deposito = Number(contenedorDeposito.value.replace(/[^0-9]/g, '')); // Filtra caracteres no numéricos
         if (!isNaN(deposito)) {
             saldo += deposito;
             contenedorSaldo.textContent = ` $${saldo}`;
         } else {
-            alert('Por favor, ingrese un valor numérico válido para el depósito.');
+            Swal.fire({
+                icon: "error",
+                title: 'Por favor, ingrese un valor numérico válido para el depósito.',
+                customClass: {
+                    popup: 'mi-clase-popup'
+                }
+            });
         }
     });
 
     botonExtraccion.addEventListener('click', function() {
-        let extraccion = Number(contenedorExtraccion.value);
+        let extraccion = Number(contenedorExtraccion.value.replace(/[^0-9]/g, '')); // Filtra caracteres no numéricos
         if (!isNaN(extraccion)) { 
-            saldo -= extraccion;
-            contenedorSaldo.textContent = ` $${saldo}`;
+            if (saldo - extraccion < 0) {
+                Swal.fire({
+                    icon: "error",
+                    title: 'No tienes saldo suficiente.',
+                    customClass: {
+                        popup: 'mi-clase-popup'
+                    }
+                });
+            } else {
+                saldo -= extraccion;
+                contenedorSaldo.textContent = ` $${saldo}`;
+            }
         } else {
-            alert('Por favor, ingrese un valor numérico válido para la extracción.');
+            Swal.fire({
+                icon: "error",
+                title: 'Por favor, ingrese un valor numérico válido para la extracción.',
+                customClass: {
+                    popup: 'mi-clase-popup'
+                }
+            });
         }
     });
 }
+
 
 depositoExtraccion()
 
@@ -150,3 +183,33 @@ function calcularRendimientos(){
 calcularRendimientos()
 
 /*INVERSIONES*/ 
+
+//USO DE PROMESAS, FETCH Y JSON
+
+let contenedorOfertaDeposito = document.querySelector(".apis");
+
+
+
+fetch('https://fakestoreapi.com/products/category/jewelery')
+    .then(res => res.json())
+    .then(json => {
+        console.log(json);
+        
+        let imagenOferta = document.createElement('img');
+        let imagenOferta2 = document.createElement('img')
+        
+        imagenOferta.src = json[0].image;
+        imagenOferta.className = 'imagen-api'
+
+        imagenOferta2.src= json[1].image;
+        imagenOferta2.className = 'imagen-api'
+        
+        contenedorOfertaDeposito.appendChild(imagenOferta);
+        contenedorOfertaDeposito.appendChild(imagenOferta2);
+    })
+    
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+
+//USO DE PROMESAS, FETCH Y JSON

@@ -184,3 +184,7 @@ grid-area: boton-iniciar-sesion;
 
 
 
+.mi-clase-popup {
+    background-color: #800000; /* Fondo color bordó */
+    color: #000; /* Texto en color negro */
+  }

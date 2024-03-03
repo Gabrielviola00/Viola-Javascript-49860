@@ -44,7 +44,15 @@ botonRegistrarse.addEventListener('click', function () {
     };
     localStorage.setItem('Usuario', JSON.stringify(usuario));
     contenedorFormularioRegistrarse.innerHTML = ''; 
-} else {alert('SU USUARIO Y CONTRASEÑA DEBEN CONTENER AL MENOS 7 CARACTERES')}}); 
+} else {Swal.fire({
+    icon: "error",
+    title: "ERROR DE REGISTRO",
+    text: "El usuario y contraseña deben tener al menos 7 carácteres.",
+    customClass: {
+        popup: 'mi-clase-popup'
+    
+    
+}})}}); 
 }
 
 botonRegistro.addEventListener('click', function () {
@@ -96,15 +104,28 @@ function crearFormularioIniciarSesion(){
                 const nombreApellidoIngresado = inputNombreApellidoIniciar.value;
                 const contraseñaIngresada = inputContraseñaIniciar.value;
             if (nombreApellidoIngresado === usuarioGuardado.nombreApellido && contraseñaIngresada === usuarioGuardado.contraseña) {
-                alert('Inicio de sesión exitoso');
                 window.location.href = "./páginas/usuario.html"
             } else {
-                alert('Nombre de usuario o contraseña incorrectos');
+                Swal.fire({
+                    icon: "error",
+                    title: "ERROR DE INICIO DE SESIÓN",
+                    text: "El usuario O contraseña ingresados son incorrectos.",
+                    customClass: {
+                        popup: 'mi-clase-popup'
+                    
+                    
+                }})
                 
             }
         } else {
-            alert('No hay usuario registrado');
-        }
+            Swal.fire({
+                icon: "error",
+                title: "NO HA REGISTRADO NINGUN USUARIO",
+                customClass: {
+                    popup: 'mi-clase-popup'
+                
+                
+            }}) }
     });
     }
 

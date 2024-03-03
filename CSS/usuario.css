@@ -35,8 +35,13 @@
 
     
 }
+
+
 .apis{
     grid-area: apis;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
 
 
       
@@ -73,3 +78,24 @@
 
 /*CAJA INVERSIONES*/
 
+.mi-clase-popup {
+    background-color: #800000; /* Fondo color bordó */
+    color: #000; /* Texto en color negro */
+  }
+
+
+  /*CAJA CONSUMO DE API*/
+.promocion{
+    margin-left: -10rem;
+    height: 7rem;
+    width: 18rem;
+    background-color: white;
+    text-align: center;
+}
+
+  .imagen-api{
+    object-fit: contain;
+    margin-left: 5rem;
+    width: 25rem;
+    height: 25rem;
+  }
